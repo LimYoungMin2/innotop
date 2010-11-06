@@ -5,3 +5,6 @@
   # Update 'our $VERSION' inside of innotop.
   # commit.
   # svn cp trunk into branches, commit again.
+  # export a clean copy to omit the .svn directory and rename it, e.g. `svn export branches/stable-1.8.0/ innotop-1.8.0`
+  # tarball that, e.g. `tar vzcf innotop-1.8.0.tar.gz innotop-1.8.0/`
+  # upload it, blog it, announce it on twitter, whatever.
