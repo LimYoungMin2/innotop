@@ -3,6 +3,7 @@
   # Check out the whole SVN repository, including branches and trunk.
   # Update the Changelog.
   # Update 'our $VERSION' inside of innotop.
+  # Update the version in the innotop.spec file.
   # commit.
   # svn cp trunk into branches, commit again.
   # export a clean copy to omit the .svn directory and rename it, e.g. `svn export branches/stable-1.8.0/ innotop-1.8.0`
