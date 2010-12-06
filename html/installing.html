@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="description" content="Documentation and user's manual for innotop toolkit"/>
+<meta name="keywords" content="MySQL"/> 
+<meta name="author" content="Baron Schwartz"/> 
+<link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js"></script>
+<script type="text/javascript" src="lightbox.js"></script>
+<title>Installing Innotop - The Innotop Manual</title>
+</head>
+<body>
+<div class="outer-container">
+<div class="inner-container">
+	<div class="header">
+		<div class="title">
+			<span class="sitename"><a href="index.html">Innotop User's Manual</a></span>
+			<div class="slogan">Installing innotop</div>
+		</div>
+	</div>
+	<div class="path">
+			<a href="index.html">Innotop Manual</a> &#8250; Installing innotop
+	</div>
+	<div class="main">		
+		<div class="content">
+
+
+<p>Innotop is easy to install.  Follow one of the methods below.</p>
+
+<h2>Your Distribution's Package</h2>
+
+<p>At this time, innotop is included in the following distributions:</p>
+
+<ul>
+   <li>FreeBSD</li>
+   <li>Gentoo GNU/Linux</li>
+   <li>Ubuntu and Debian</li>
+   <li>RPM packages for many platforms can be found at the openSUSE buildservice:
+   <ul>
+      <li>http://download.opensuse.org/repositories/server:/database/Fedora_Extras_5/
+      <li>http://download.opensuse.org/repositories/server:/database/Fedora_Extras_6/
+      <li>http://download.opensuse.org/repositories/server:/database/openSUSE_10.2/
+      <li>http://download.opensuse.org/repositories/server:/database/openSUSE_Factory/
+      <li>http://download.opensuse.org/repositories/server:/database/SLES_9/
+      <li>http://download.opensuse.org/repositories/server:/database/SLE_10/
+      <li>http://download.opensuse.org/repositories/server:/database/SUSE_Linux_10.0/
+      <li>http://download.opensuse.org/repositories/server:/database/SUSE_Linux_10.1/
+   </ul>
+   </li>
+
+<p>If you want to contribute a package, please contact us about it.</p>
+
+<h2>Install From a Tarball</h2>
+
+<p>This doesn't work on Windows.  If you install from the tarball, extract the
+tarball and go into the resulting directory:</p>
+
+<code>
+   tar zxvf innotop-<version>.tar.gz
+   cd innotop-<version>
+</code>
+
+<p>Generate the makefile, which will check Perl module dependencies and so forth:</p>
+
+<code>
+   perl Makefile.PL
+</code>
+
+<p>Install the program and man page:</p>
+
+<code>
+   make install
+</code>
+
+<p>To remove the files, simply run:</p>
+
+<code>
+   make uninstall
+</code>
+
+<h2>Install Pre-Requisites</h2>
+
+<p>If you want to install from a package management system that doesn't automatically fetch and install dependencies for you, you might need to install packages similar to the following (varies by operating system):</p>
+
+<ul>
+   <li>MySQL-shared-compat</li>
+   <li>perl-DBI</li>
+   <li>perl-DBD-mysql</li>
+   <li>perl-TermReadKey</li>
+</ul>
+
+<h2>Build an Installable RPM</h2>
+
+<p>If your system is RPM-based, you can generate an installable RPM directly from
+the tarball with the following command:</p>
+
+<code>
+   rpmbuild -tb --clean innotop-<version>.tar.gz
+</code>
+
+<p>You can then install that RPM via your usual means (varies by distribution).</p>
+
+<h2>On Microsoft Windows</h2>
+
+<p>I have tested installation with ActivePerl 5.8.8.  Use the Perl Package
+Manager tool to install Time-HiRes, DBD-mysql, Term-ANSIColor,
+Win32::Console::ANSI, and Term-ReadLine.  These aren't absolutely required, but
+they make it much easier to use innotop!  If your installation doesn't have it
+already, Term-ReadKey and List::Util are *required* as well.  These are part of
+the standard distribution unless you're running a very old version of Perl.</p>
+
+<p>After that, simply unpack the zip or tarball file from Google Code and run
+innotop from within a command prompt.  The only files you need are innotop.</p>
+
+<code>
+C:\&gt; cd Path\To\Innotop\Installation\
+C:\&gt; perl innotop
+</code>
+
+		</div>
+		<div class="navigation">
+			<h2>Navigation</h2>
+			<ul>
+				<li><a href="installing.html">Installing innotop</a></li>
+				<li><a href="manual.html">The innotop man page</a></li>
+            <li><a href="screenshots.html">Screenshots</a></li>
+			</ul>
+		</div>
+		<div class="clearer">&nbsp;</div>
+	</div>
+	<div class="footer">
+		<span class="right"><a href="http://templates.arcsin.se/">Website template</a> by <a href="http://arcsin.se/">Arcsin</a></span>
+		<div class="clearer"></div>
+	</div>
+</div>
+</div>
+</body>
+</html>
